@@ -1,69 +1,44 @@
-# Welcome to your Lovable project
+# 🧠 AskDB – Query Your Data with AI, No SQL Needed
 
-## Project info
+**AskDB** is an AI-powered web app that lets you upload database-like PDFs and interact with the data using plain English — no SQL skills required. Ask a question, and the app converts it into a SQL query using OpenAI's GPT model, executes it on your structured data, and shows you the results instantly.
 
-**URL**: https://lovable.dev/projects/b4a0ec5e-fb89-4bfe-afe4-e849fc88856a
+Whether you're a student, analyst, or just someone dealing with data, AskDB simplifies the way you interact with databases.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ⚙️ How It Works
 
-**Use Lovable**
+1. 📤 **Upload a PDF** – Upload your database (tables) in PDF format.
+2. 🧾 **PDF Extraction** – `pdfplumber` extracts and converts the tables into a usable SQL format.
+3. 💬 **Ask Questions** – Type a question like _"Show me all students with marks above 90"_.
+4. 🧠 **AI Translation** – FastAPI backend sends your query to OpenAI, which translates it into SQL.
+5. 📊 **Get Results** – The query runs on your database, and the matching results are returned.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b4a0ec5e-fb89-4bfe-afe4-e849fc88856a) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🧰 Tech Stack
 
-**Use your preferred IDE**
+- **Frontend**: React Native (TypeScript)
+- **Backend**: FastAPI (Python)
+- **AI/NLP**: OpenAI API (text-davinci or gpt-3.5-turbo)
+- **Database**: MySQL / SQLite (configurable)
+- **PDF Extraction**: pdfplumber
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📦 Installation
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Node.js & npm
+- Python 3.9+
+- OpenAI API key
+- Expo CLI (for React Native)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Step 1: Clone the Repo
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b4a0ec5e-fb89-4bfe-afe4-e849fc88856a) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+```bash
+git clone https://github.com/your-username/AskDB_V2.git
+cd AskDB_V2
